@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.commonTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.commonTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.jsTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.jsTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.jvmTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.jvmTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.nativeTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.nativeTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/untitled2.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/untitled2.unitTest.iml" />
+    </modules>
+  </component>
+</project>
