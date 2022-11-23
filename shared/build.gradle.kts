@@ -5,13 +5,12 @@ plugins {
 
 android {
     compileSdk = 31
+
+    namespace = "me.ilker.shared"
 }
 
 kotlin {
-    android {
-        publishAllLibraryVariants()
-//        publishLibraryVariants("release", "debug")
-    }
+    android()
 
     iosArm64 { /* Apple iOS on ARM64 platforms (Apple iPhone 5s and newer) */ }
     iosX64 {
