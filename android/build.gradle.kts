@@ -1,8 +1,6 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.application")
-    alias(libs.plugins.hilt.plugin)
-    kotlin("kapt")
 }
 
 android {
@@ -28,15 +26,6 @@ android {
     }
 
     namespace = "me.ilker.yet_another_kmp"
-
-    packagingOptions {
-        resources.excludes.apply {
-            add("META-INF/LICENSE")
-            add("META-INF/*.properties")
-            add("META-INF/AL2.0")
-            add("META-INF/LGPL2.1")
-        }
-    }
 }
 
 kotlin {
@@ -48,10 +37,6 @@ kotlin {
 }
 
 dependencies {
-    implementation(libs.android.hilt)
-    implementation(libs.android.hilt.compiler)
-}
-
-kapt {
-    correctErrorTypes = true
+    implementation(libs.koin.android)
+    implementation(libs.koin.core)
 }
