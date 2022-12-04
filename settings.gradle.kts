@@ -1,4 +1,4 @@
-rootProject.name = "untitled2"
+rootProject.name = "yet_another_kmp"
 
 pluginManagement {
     repositories {
@@ -10,3 +10,4 @@ pluginManagement {
 
 include("shared")
 include(":android")
+include(":ios")
