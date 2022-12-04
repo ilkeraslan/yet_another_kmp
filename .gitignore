@@ -2,6 +2,8 @@
 .gradle
 /local.properties
 /build
+/android/build
+/shared/build
 *.class
 
 # Package Files #
