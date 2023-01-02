@@ -11,3 +11,4 @@ pluginManagement {
 include("shared")
 include(":android")
 include(":ios")
+include(":server")

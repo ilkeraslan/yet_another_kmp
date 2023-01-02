@@ -1,12 +1,17 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.8.0"
 }
 
 android {
     compileSdk = 31
-
     namespace = "me.ilker.shared"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
 }
 
 kotlin {
@@ -35,11 +40,21 @@ kotlin {
         }
     }
 
+    jvm()
+
     sourceSets {
-        val commonMain by sourceSets.getting
+        val commonMain by sourceSets.getting {
+            dependencies {
+//                implementation(libs.kotlinx.serialization)
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+            }
+        }
+
         val commonTest by sourceSets.getting
         val androidMain by sourceSets.getting
         val androidTest by sourceSets.getting
+        val jvmMain by sourceSets.getting
+        val jvmTest by sourceSets.getting
 
         val iosX64Main by getting
         val iosArm64Main by getting

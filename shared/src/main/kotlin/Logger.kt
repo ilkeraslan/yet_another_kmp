@@ -1,3 +1,3 @@
-fun log {
+fun log() {
     println("Hello sir")
 }
