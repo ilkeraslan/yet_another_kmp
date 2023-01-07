@@ -15,9 +15,7 @@ android {
 }
 
 kotlin {
-    android {
-        publishAllLibraryVariants()
-    }
+    android()
 
     iosArm64 {
         /* Apple iOS on ARM64 platforms (Apple iPhone 5s and newer) */

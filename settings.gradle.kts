@@ -8,7 +8,8 @@ pluginManagement {
     }
 }
 
-include("shared")
+include(":shared")
+include(":shared:models")
 include(":android")
 include(":ios")
 include(":server")

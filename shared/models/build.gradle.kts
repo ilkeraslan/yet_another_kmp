@@ -1,18 +1,16 @@
 plugins {
     kotlin("multiplatform")
-    id("com.android.application")
+    id("com.android.library")
+    kotlin("plugin.serialization") version "1.8.0"
 }
 
 android {
     compileSdk = 31
-    namespace = "me.ilker.yet_another_kmp"
+    namespace = "me.ilker.shared.models"
 
     defaultConfig {
         minSdk = 24
         targetSdk = 31
-
-        versionCode = 1
-        versionName = "1.0"
     }
 
     compileOptions {
@@ -22,21 +20,21 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
 
         getByName("debug") {
-            applicationIdSuffix = ".debug"
-            isDebuggable = true
+            isMinifyEnabled = false
+            isJniDebuggable = true
         }
     }
 }
 
 kotlin {
+    jvm()
     android()
 }
 
 dependencies {
-    implementation(libs.koin.android)
-    implementation(libs.koin.core)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }

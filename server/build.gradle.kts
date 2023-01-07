@@ -13,6 +13,7 @@ application {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":shared:models"))
 
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
