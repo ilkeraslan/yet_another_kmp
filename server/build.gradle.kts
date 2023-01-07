@@ -6,8 +6,10 @@ import io.ktor.plugin.features.JreVersion
 plugins {
     application
     kotlin("jvm")
-    kotlin("plugin.serialization") version "1.8.0"
-    @Suppress("DSL_SCOPE_VIOLATION") // "libs" produces a false-positive warning, see https://youtrack.jetbrains.com/issue/KTIJ-19369
+    kotlin("plugin.serialization")
+
+    // "libs" produces a false-positive warning, see https://youtrack.jetbrains.com/issue/KTIJ-19369
+    @Suppress("DSL_SCOPE_VIOLATION")
     id(libs.plugins.ktor.get().pluginId) version "2.2.2"
 }
 
