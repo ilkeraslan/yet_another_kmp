@@ -20,7 +20,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
         }
 
         getByName("debug") {
@@ -31,7 +31,6 @@ android {
 }
 
 kotlin {
-    jvm()
     android()
 }
 
