@@ -11,6 +11,7 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "serialization"}
 
+ktor-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor"}
 ktor-serialization-kotlinx = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor"}
 ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
@@ -18,3 +19,4 @@ ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "k
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
 [plugins]
+ktor = { id = "io.ktor.plugin"}

@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
 
         getByName("debug") {
@@ -37,6 +37,8 @@ kotlin {
 }
 
 dependencies {
+    implementation(project(":shared:models"))
+
     implementation(libs.koin.android)
     implementation(libs.koin.core)
 }
