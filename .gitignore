@@ -4,6 +4,7 @@
 /build
 /android/build
 /shared/build
+/server/build
 *.class
 
 # Package Files #
