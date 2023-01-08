@@ -1,6 +1,6 @@
 .idea
 .gradle
-/local.properties
+local.properties
 /build
 /android/build
 /shared/build
