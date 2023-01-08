@@ -38,7 +38,6 @@ ktor {
 }
 
 dependencies {
-    implementation(project(":shared"))
     implementation(project(":shared:models"))
 
     implementation(libs.ktor.cors)

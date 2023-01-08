@@ -19,6 +19,7 @@ dependencyResolutionManagement {
 
 include(":shared")
 include(":shared:models")
+include(":shared:network")
 include(":android")
 include(":ios")
 include(":server")

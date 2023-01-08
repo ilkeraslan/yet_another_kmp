@@ -1,5 +1,4 @@
 plugins {
-    kotlin("multiplatform")
     id("com.android.application")
 }
 
@@ -22,7 +21,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
 
         getByName("debug") {
@@ -32,12 +31,9 @@ android {
     }
 }
 
-kotlin {
-    android()
-}
-
 dependencies {
-    implementation(project(":shared:models"))
+    implementation(project(mapOf("path" to ":shared")))
+    implementation(project(mapOf("path" to ":shared:models")))
 
     implementation(libs.koin.android)
     implementation(libs.koin.core)

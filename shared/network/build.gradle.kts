@@ -2,8 +2,6 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     kotlin("plugin.serialization")
-    @Suppress("DSL_SCOPE_VIOLATION")
-    alias(libs.plugins.sqlDelight)
 }
 
 java {
@@ -13,7 +11,7 @@ java {
 
 android {
     compileSdk = 31
-    namespace = "me.ilker.shared"
+    namespace = "me.ilker.shared.network"
 
     defaultConfig {
         minSdk = 24
@@ -43,21 +41,21 @@ kotlin {
     iosArm64 {
         /* Apple iOS on ARM64 platforms (Apple iPhone 5s and newer) */
         this.binaries.framework {
-            baseName = "YetAnotherKMP"
+            baseName = "YetAnotherKMPNetwork"
         }
     }
 
     iosX64 {
         /* Apple iOS simulator on x86_64 platforms */
         this.binaries.framework {
-            baseName = "YetAnotherKMP"
+            baseName = "YetAnotherKMPNetwork"
         }
     }
 
     iosSimulatorArm64 {
         /* Apple iOS simulator on Apple Silicon platforms */
         this.binaries.framework {
-            baseName = "YetAnotherKMP"
+            baseName = "YetAnotherKMPNetwork"
         }
     }
 
@@ -66,31 +64,21 @@ kotlin {
     sourceSets {
         val commonMain by sourceSets.getting {
             dependencies {
-                implementation(project(":shared:network"))
-                implementation(project(":shared:models"))
+                implementation(project(mapOf("path" to ":shared:models")))
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.content.negotiation)
                 implementation(libs.ktor.serialization.kotlinx)
-                implementation(libs.sqlDeglight.runtime)
             }
         }
-
-        val commonTest by sourceSets.getting
 
         val androidMain by sourceSets.getting {
             dependencies {
                 implementation(libs.ktor.client.android)
-                implementation(libs.sqlDeglight.android)
             }
         }
-        val androidTest by sourceSets.getting
 
-        val jvmMain by sourceSets.getting {
-            dependencies {
-                implementation(libs.sqlDeglight.sqlite)
-            }
-        }
+        val jvmMain by sourceSets.getting
 
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -104,14 +92,7 @@ kotlin {
 
             dependencies {
                 implementation(libs.ktor.client.darwin)
-                implementation(libs.sqlDeglight.native)
             }
         }
-    }
-}
-
-sqldelight {
-    database("DietDatabase") {
-        packageName = "me.ilker.yet_another_kmp.shared.cache"
     }
 }

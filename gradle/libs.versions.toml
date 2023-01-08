@@ -30,6 +30,7 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 sqlDeglight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelight" }
 sqlDeglight-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDeglight-native = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelight" }
+sqlDeglight-sqlite = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqlDelight" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

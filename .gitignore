@@ -5,6 +5,7 @@ local.properties
 /android/build
 /shared/build
 /shared/models/build
+/shared/network/build
 /server/build
 *.class
 

@@ -2,8 +2,6 @@ group = "me.ilker"
 version = "1.0-SNAPSHOT"
 
 buildscript {
-    val kotlinVersion: String by project
-
     repositories {
         google()
         mavenCentral()
