@@ -4,6 +4,7 @@
 /build
 /android/build
 /shared/build
+/shared/models/build
 /server/build
 *.class
 

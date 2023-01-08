@@ -1,0 +1,18 @@
+CREATE TABLE Diet (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT
+);
+
+getAll:
+SELECT * FROM Diet;
+
+getDiet:
+SELECT * FROM Diet
+WHERE id = ?;
+
+insertDiet:
+INSERT INTO Diet(name)
+VALUES(?);
+
+deleteAll:
+DELETE FROM Diet;
