@@ -4,6 +4,7 @@ import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
+import me.ilker.yet_another_kmp.models.Diet
 
 class DietApi {
     private val httpClient = HttpClient {
@@ -17,7 +18,5 @@ class DietApi {
         }
     }
 
-    suspend fun getDiets(): List<Diet> {
-        return httpClient.get("http://0.0.0.0:8080").body()
-    }
+    suspend fun getDiets(): List<Diet> = httpClient.get("http://0.0.0.0:8080").body()
 }

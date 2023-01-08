@@ -5,7 +5,7 @@ import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import Customer
+import me.ilker.yet_another_kmp.models.Customer
 
 val customerStorage = mutableListOf<Customer>()
 
@@ -41,7 +41,7 @@ fun Route.customerRoutes() {
             val customer = call.receive<Customer>()
             customerStorage.add(customer)
             call.respondText(
-                text = "Customer stored correctly",
+                text = "me.ilker.yet_another_kmp.models.Customer stored correctly",
                 status = HttpStatusCode.Created
             )
         }
@@ -49,7 +49,7 @@ fun Route.customerRoutes() {
         delete("{id?}") {
             val id = call.parameters["id"] ?: return@delete call.respond(HttpStatusCode.BadRequest)
             if (customerStorage.removeIf { it.id == id }) {
-                call.respondText("Customer removed correctly", status = HttpStatusCode.Accepted)
+                call.respondText("me.ilker.yet_another_kmp.models.Customer removed correctly", status = HttpStatusCode.Accepted)
             } else {
                 call.respondText("Not Found", status = HttpStatusCode.NotFound)
             }

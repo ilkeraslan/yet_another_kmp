@@ -14,8 +14,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainScope.launch {
-            val result = sdk.getDiets(true)
-            println(result)
+//            val result = sdk.getDiets(true)
+//            println(result)
         }
     }
 }

@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.config.JvmTarget
+
 plugins {
     id("com.android.application")
+    kotlin("android")
 }
 
 android {
@@ -21,13 +24,18 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
         }
 
         getByName("debug") {
             applicationIdSuffix = ".debug"
             isDebuggable = true
+            isMinifyEnabled = false
         }
+    }
+
+    kotlinOptions {
+        jvmTarget = JvmTarget.JVM_11.description
     }
 }
 

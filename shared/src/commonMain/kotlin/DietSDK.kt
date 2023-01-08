@@ -1,3 +1,4 @@
+import me.ilker.yet_another_kmp.models.Diet
 import me.ilker.yet_another_kmp.shared.cache.Database
 import me.ilker.yet_another_kmp.shared.cache.DatabaseDriverFactory
 import meilkeryetanotherkmpsharedcache.DietTable
