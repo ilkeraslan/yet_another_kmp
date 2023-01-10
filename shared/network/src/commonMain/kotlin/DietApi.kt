@@ -18,9 +18,5 @@ class DietApi {
         }
     }
 
-    suspend fun getDiets(): List<Diet> {
-        val response = httpClient.get("http://10.0.2.2:8080/diets")
-        println(response)
-        return response.body()
-    }
+    suspend fun getDiets(): List<Diet> = httpClient.get("http://10.0.2.2:8080/diets").body()
 }

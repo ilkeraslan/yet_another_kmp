@@ -7,6 +7,8 @@ plugins {
     application
     kotlin("jvm")
     kotlin("plugin.serialization")
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("com.google.cloud.tools.appengine") version "2.4.2"
 
     // "libs" produces a false-positive warning, see https://youtrack.jetbrains.com/issue/KTIJ-19369
     @Suppress("DSL_SCOPE_VIOLATION")
@@ -34,6 +36,16 @@ ktor {
                 password = providers.environmentVariable("DOCKER_HUB_PASSWORD")
             )
         )
+    }
+}
+
+configure<com.google.cloud.tools.gradle.appengine.appyaml.AppEngineAppYamlExtension> {
+    stage {
+        setArtifact("build/libs/${project.name}.jar")
+    }
+    deploy {
+        version = "GCLOUD_CONFIG"
+        projectId = "GCLOUD_CONFIG"
     }
 }
 
