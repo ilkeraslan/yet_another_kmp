@@ -9,17 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Hello, world!")
-                .padding()
                 .font(.title)
                 .foregroundColor(.cyan)
+                .padding(.bottom)
             
-            Text("This is your subtitle!")
-                .padding()
-                .font(.title2)
-                .foregroundColor(.black)
+            HStack {
+                Text("This is your long subtitle which will be rendered in more lines with some other lines!")
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                
+                Text("And here is a trailing text.")
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+            }
         }
+        .padding()
     }
 }
 
