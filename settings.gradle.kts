@@ -25,7 +25,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":shared")
+include(":shared:root")
 include(":shared:models")
 include(":shared:network")
 include(":android")

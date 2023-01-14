@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":shared")))
+    implementation(project(mapOf("path" to ":shared:root")))
     implementation(project(mapOf("path" to ":shared:models")))
 
     implementation(libs.koin.android)

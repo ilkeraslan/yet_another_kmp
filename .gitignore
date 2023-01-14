@@ -3,7 +3,7 @@
 local.properties
 /build
 /android/build
-/shared/build
+/shared/root/build
 /shared/models/build
 /shared/network/build
 /server/build
