@@ -68,11 +68,13 @@ kotlin {
             dependencies {
                 implementation(project(":shared:network"))
                 implementation(project(":shared:models"))
+                implementation(project(":shared:home"))
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.content.negotiation)
                 implementation(libs.ktor.serialization.kotlinx)
                 implementation(libs.sqlDeglight.runtime)
+                implementation(libs.decompose)
             }
         }
 

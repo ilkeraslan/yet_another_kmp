@@ -1,6 +1,7 @@
 [versions]
 androidGradlePlugin = "7.3.1"
 coroutines = "1.6.4"
+decompose = "1.0.0-beta-04-native-compose"
 kotlin = "1.7.20"
 koin = "3.2.0"
 ktor = "2.2.2"
@@ -9,6 +10,8 @@ serialization = "1.4.1"
 sqlDelight = "1.5.4"
 
 [libraries]
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
