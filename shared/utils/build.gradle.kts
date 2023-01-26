@@ -13,14 +13,13 @@ kotlin {
     sourceSets {
         val commonMain by sourceSets.getting {
             dependencies {
-                implementation(project(":shared:models"))
-                implementation(project(":shared:utils"))
                 implementation(libs.decompose)
                 implementation(libs.mvi.kotlin)
-                implementation(libs.mvi.kotlin.extensions.coroutines)
             }
         }
 
+        val commonTest by sourceSets.getting
         val jvmMain by sourceSets.getting
+        val jvmTest by sourceSets.getting
     }
 }
