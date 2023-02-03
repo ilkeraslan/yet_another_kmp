@@ -2,7 +2,8 @@
 .gradle
 local.properties
 /build
-/android/build
+/android/app/build
+/android/navigation/build
 /shared/root/build
 /shared/models/build
 /shared/network/build

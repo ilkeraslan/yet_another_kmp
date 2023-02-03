@@ -15,8 +15,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         mainScope.launch {
-            val result = sdk.getDiets(true)
-            println(result)
+            try {
+                val result = sdk.getDiets(true)
+                println(result)
+            } catch (e: Exception) {
+                println(e)
+            }
         }
     }
 }

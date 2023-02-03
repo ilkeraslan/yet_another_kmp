@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk = 31
-    namespace = "me.ilker.yet_another_kmp"
+    namespace = "me.ilker.yet_another_kmp.app"
 
     defaultConfig {
         minSdk = 24

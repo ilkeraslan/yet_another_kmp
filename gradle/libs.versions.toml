@@ -1,5 +1,6 @@
 [versions]
 androidGradlePlugin = "7.3.1"
+androidxNavigation = "2.5.3"
 coroutines = "1.6.4"
 kotlin = "1.7.20"
 koin = "3.2.0"
@@ -9,12 +10,11 @@ serialization = "1.4.1"
 sqlDelight = "1.5.4"
 
 [libraries]
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
-
 ktor-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor"}
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor"}
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor"}
