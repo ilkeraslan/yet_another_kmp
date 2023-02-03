@@ -14,10 +14,6 @@ kotlin {
         val commonMain by sourceSets.getting {
             dependencies {
                 implementation(project(":shared:models"))
-                implementation(project(":shared:utils"))
-                implementation(libs.decompose)
-                implementation(libs.mvi.kotlin)
-                implementation(libs.mvi.kotlin.extensions.coroutines)
             }
         }
 
