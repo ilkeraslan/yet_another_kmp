@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 33
     namespace = "me.ilker.yet_another_kmp.app"
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 31
+        minSdk = 27
+        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0"
@@ -38,8 +38,9 @@ android {
         compose = true
     }
 
+    val versionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = versionCatalog.findVersion("androidxComposeCompiler").get().toString()
     }
 
     kotlinOptions {
@@ -50,8 +51,12 @@ android {
 dependencies {
     implementation(project(mapOf("path" to ":shared:root")))
     implementation(project(mapOf("path" to ":shared:models")))
+    implementation(project(mapOf("path" to ":android:navigation")))
+    implementation(project(mapOf("path" to ":android:home")))
 
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.koin.android)
     implementation(libs.koin.core)
 }
