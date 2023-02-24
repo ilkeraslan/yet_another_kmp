@@ -34,6 +34,14 @@ android {
         }
     }
 
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0"
+    }
+
     kotlinOptions {
         jvmTarget = JvmTarget.JVM_11.description
     }
@@ -43,6 +51,7 @@ dependencies {
     implementation(project(mapOf("path" to ":shared:root")))
     implementation(project(mapOf("path" to ":shared:models")))
 
+    implementation(libs.androidx.activity.compose)
     implementation(libs.koin.android)
     implementation(libs.koin.core)
 }
